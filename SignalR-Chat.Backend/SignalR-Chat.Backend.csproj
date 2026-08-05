@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>SignalR_Chat.Backend</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.6"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\SignalR-Chat.Shared\SignalR-Chat.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\" />
+      <Folder Include="Data\" />
+      <Folder Include="Entities\" />
+      <Folder Include="Extensions\" />
+      <Folder Include="Interfaces\" />
+      <Folder Include="Middleware\" />
+      <Folder Include="Repositories\" />
+      <Folder Include="Services\" />
+      <Folder Include="SignalR\" />
+    </ItemGroup>
+
+</Project>

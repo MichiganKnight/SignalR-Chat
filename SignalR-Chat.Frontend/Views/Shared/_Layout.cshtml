@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>@ViewData["Title"] - SignalR Chat</title>
+        
+        <script type="importmap"></script>
+        
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+                <div class="container-fluid">
+                    <a class="navbar-brand" asp-controller="Chat" asp-action="Index">
+                        <i class="bi bi-chat-dots"></i>
+                        SignalR Chat
+                    </a>
+                    
+                    <div class="d-flex align-items-center gap-2">
+                        <button id="themeToggle" class="btn btn-outline-secondary">
+                            <i class="bi bi-sun-fill"></i>
+                        </button>
+                        
+                        <button class="btn btn-outline-secondary">
+                            <i class="bi bi-person-circle"></i>
+                            User
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            @RenderBody()
+        </main>
+        
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/theme.js"></script>
+        
+        @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
