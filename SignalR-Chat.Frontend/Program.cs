@@ -1,7 +1,14 @@
+using SignalR_Chat.Frontend.Services;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient<AuthService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["BackendApi:BaseUri"]!);
+});
 
 WebApplication app = builder.Build();
 

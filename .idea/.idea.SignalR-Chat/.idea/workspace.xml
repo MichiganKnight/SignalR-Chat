@@ -17,11 +17,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43ab032-dc00-4ac1-a541-6f951d7d0b9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Backend/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Backend/SignalR-Chat.Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Backend/SignalR-Chat.Backend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Backend/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Backend/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Backend/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Backend/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/SignalR-Chat.Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/SignalR-Chat.Frontend.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Chat/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Chat/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Account/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Account/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Account/Register.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +58,10 @@
     <setting file="file://$PROJECT_DIR$/SignalR-Chat.Backend/Migrations/20260805220146_AddIdentity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Controllers/AccountController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Controllers/ChatController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Services/AuthService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/ViewModels/ChatViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/ViewModels/LoginViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/ViewModels/RegisterViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Account/Register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Chat/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
@@ -193,7 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1785958418954</updated>
       <workItem from="1785958419974" duration="720000" />
-      <workItem from="1785959144583" duration="5496000" />
+      <workItem from="1785959144583" duration="9070000" />
     </task>
     <servers />
   </component>

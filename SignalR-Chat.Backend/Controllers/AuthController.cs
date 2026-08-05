@@ -22,14 +22,21 @@ namespace SignalR_Chat.Backend.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto request)
         {
-            Task<ApplicationUser?> existingUser = _userManager.FindByEmailAsync(request.Email);
-
-            if (existingUser != null)
+            if (await _userManager.FindByEmailAsync(request.Email) != null)
             {
                 return BadRequest(new AuthResponseDto
                 {
                     Success = false,
                     Message = "Email Already Exists"
+                });
+            }
+
+            if (await _userManager.FindByNameAsync(request.Username) != null)
+            {
+                return BadRequest(new AuthResponseDto
+                {
+                    Success = false,
+                    Message = "Username Already Exists"
                 });
             }
 
@@ -43,9 +50,13 @@ namespace SignalR_Chat.Backend.Controllers
 
             if (!result.Succeeded)
             {
-                return BadRequest(result.Errors);
+                return BadRequest(new AuthResponseDto
+                {
+                    Success = false,
+                    Message = string.Join(Environment.NewLine, result.Errors.Select(e => e.Description))
+                });
             }
-
+            
             return Ok(new AuthResponseDto
             {
                 Success = true,
@@ -65,7 +76,7 @@ namespace SignalR_Chat.Backend.Controllers
                 return Unauthorized(new AuthResponseDto
                 {
                     Success = false,
-                    Message = "Invalid Login"
+                    Message = "Invalid Email or Password"
                 });
             }
 
@@ -76,10 +87,10 @@ namespace SignalR_Chat.Backend.Controllers
                 return Unauthorized(new AuthResponseDto
                 {
                     Success = false,
-                    Message = "Invalid Login"
+                    Message = "Invalid Email or Password"
                 });
             }
-
+            
             return Ok(new AuthResponseDto
             {
                 Success = true,

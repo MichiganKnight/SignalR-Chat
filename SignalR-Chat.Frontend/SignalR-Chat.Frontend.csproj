@@ -11,8 +11,4 @@
       <ProjectReference Include="..\SignalR-Chat.Shared\SignalR-Chat.Shared.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Services\" />
-    </ItemGroup>
-
 </Project>
