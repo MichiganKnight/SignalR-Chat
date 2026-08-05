@@ -17,13 +17,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43ab032-dc00-4ac1-a541-6f951d7d0b9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SignalR-Chat.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Backend/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Backend/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Backend/SignalR-Chat.Backend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Backend/SignalR-Chat.Backend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/SignalR-Chat.Frontend.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/SignalR-Chat.Frontend.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Chat/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Chat/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="1" />
@@ -40,16 +47,31 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Backend/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Backend/Entities/Conversation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Backend/Entities/Message.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Backend/Migrations/20260805215203_InitialCreate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Backend/Migrations/20260805220146_AddIdentity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Controllers/AccountController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Controllers/ChatController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/ViewModels/ChatViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Account/Register.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Chat/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SignalR-Chat.Shared/Class1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Shared/DTOs/AuthResponseDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Shared/DTOs/ConversationDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Shared/DTOs/LoginDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Shared/DTOs/MessageDto.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR-Chat.Shared/DTOs/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="3HVfzSuHjgoHVlkrv6szI1mPOYt" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -60,9 +82,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.SignalR-Chat.Backend: http.executor": "Run",
+    ".NET Launch Settings Profile.SignalR-Chat.Backend: https.executor": "Run",
+    ".NET Launch Settings Profile.SignalR-Chat.Frontend: http.executor": "Run",
+    ".NET Launch Settings Profile.SignalR-Chat.Frontend: https.executor": "Run",
+    "Compound.Run SignalR Chat App.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -75,11 +103,16 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
+    "settings.editor.selected.configurable": "RiderPMCOptionsPageId",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.SignalR-Chat.Backend: http">
+  <component name="RunManager" selected="Compound.Run SignalR Chat App">
+    <configuration name="Run SignalR Chat App" type="CompoundRunConfigurationType">
+      <toRun name="SignalR-Chat.Backend: https" type="LaunchSettings" />
+      <toRun name="SignalR-Chat.Frontend: https" type="LaunchSettings" />
+      <method v="2" />
+    </configuration>
     <configuration name="SignalR-Chat.Backend: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/SignalR-Chat.Backend/SignalR-Chat.Backend.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net10.0" />
@@ -144,6 +177,13 @@
         <option name="Build" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue=".NET Launch Settings Profile.SignalR-Chat.Backend: http" />
+      <item itemvalue=".NET Launch Settings Profile.SignalR-Chat.Backend: https" />
+      <item itemvalue=".NET Launch Settings Profile.SignalR-Chat.Frontend: http" />
+      <item itemvalue=".NET Launch Settings Profile.SignalR-Chat.Frontend: https" />
+      <item itemvalue="Compound.Run SignalR Chat App" />
+    </list>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -153,6 +193,7 @@
       <option name="presentableId" value="Default" />
       <updated>1785958418954</updated>
       <workItem from="1785958419974" duration="720000" />
+      <workItem from="1785959144583" duration="5496000" />
     </task>
     <servers />
   </component>
