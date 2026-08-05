@@ -10,7 +10,7 @@
         
         public int SenderId { get; set; }
 
-        public User Sender { get; set; } = null!;
+        public ApplicationUser Sender { get; set; } = null!;
         
         public int ConversationId { get; set; }
 
