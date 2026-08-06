@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@using SignalR_Chat.Frontend.Services
+@inject CurrentUserService CurrentUser
+
+<!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
     <head>
         <meta charset="utf-8"/>
@@ -26,26 +29,42 @@
                             <i class="bi bi-sun-fill"></i>
                         </button>
                         
-                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-person-circle"></i>
-                            Account
-                        </button>
-                        
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li>
-                                <a class="dropdown-item" asp-controller="Account" asp-action="Login">
-                                    <i class="bi bi-box-arrow-in-right"></i>
-                                    Login
-                                </a>
-                            </li>
-                            
-                            <li>
-                                <a class="dropdown-item" asp-controller="Account" asp-action="Register">
-                                    <i class="bi bi-person-plus"></i>
-                                    Register
-                                </a>
-                            </li>
-                        </ul>
+                        @if (CurrentUser.User?.IsAuthenticated == true)
+                        {
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-person-circle"></i>
+                                    @CurrentUser.User.Username
+                                </button>
+                                
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="Logout">
+                                            <i class="bi bi-box-arrow-right"></i>
+                                            Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>   
+                        }
+                        else
+                        {
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-person-circle"></i>
+                                    Account
+                                </button>
+                                
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="Login">Login</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Account" asp-action="Register">Register</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
                     </div>
                 </div>
             </nav>

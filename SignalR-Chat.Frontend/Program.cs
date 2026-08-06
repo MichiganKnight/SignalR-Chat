@@ -10,6 +10,8 @@ builder.Services.AddHttpClient<AuthService>(client =>
     client.BaseAddress = new Uri(builder.Configuration["BackendApi:BaseUri"]!);
 });
 
+builder.Services.AddSingleton<CurrentUserService>();
+
 WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using SignalR_Chat.Backend.Entities;
+using SignalR_Chat.Backend.Services;
 using SignalR_Chat.Shared.DTOs;
 using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
@@ -12,11 +13,13 @@ namespace SignalR_Chat.Backend.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly JwtService _jwtService;
         
-        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
+        public AuthController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, JwtService jwtService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _jwtService = jwtService;
         }
 
         [HttpPost("register")]
@@ -96,7 +99,8 @@ namespace SignalR_Chat.Backend.Controllers
                 Success = true,
                 Message = "Login Successful",
                 UserId = user.Id,
-                Username = user.UserName
+                Username = user.UserName,
+                Token = _jwtService.GenerateToken(user)
             });
         }
     }

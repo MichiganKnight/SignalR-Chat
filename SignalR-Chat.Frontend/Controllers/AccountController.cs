@@ -8,10 +8,12 @@ namespace SignalR_Chat.Frontend.Controllers
     public class AccountController : Controller
     {
         private readonly AuthService _authService;
+        private readonly CurrentUserService _currentUser;
         
-        public AccountController(AuthService authService)
+        public AccountController(AuthService authService, CurrentUserService currentUser)
         {
             _authService = authService;
+            _currentUser = currentUser;
         }
         
         [HttpGet]
@@ -67,12 +69,22 @@ namespace SignalR_Chat.Frontend.Controllers
 
             if (result?.Success == true)
             {
+                _currentUser.SetUser(result.UserId!.Value, result.Username!, result.Token!);
+                
                 return RedirectToAction("Index", "Chat");
             }
             
             ModelState.AddModelError(string.Empty, result?.Message ?? "Login Failed");
             
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            _currentUser.Logout();
+            
+            return RedirectToAction("Login");
         }
     }
 }
