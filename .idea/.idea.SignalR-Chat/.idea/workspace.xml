@@ -17,10 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a43ab032-dc00-4ac1-a541-6f951d7d0b9b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Backend/Hubs/ChatHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Backend/Hubs/ChatHub.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Chat/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/Views/Chat/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/wwwroot/css/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignalR-Chat.Frontend/wwwroot/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR-Chat.Frontend/wwwroot/js/chat.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +197,7 @@
       <option name="presentableId" value="Default" />
       <updated>1785958418954</updated>
       <workItem from="1785958419974" duration="720000" />
-      <workItem from="1785959144583" duration="16354000" />
+      <workItem from="1785959144583" duration="16577000" />
     </task>
     <servers />
   </component>
