@@ -74,6 +74,8 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddSignalR();
 
+builder.Services.AddSingleton<OnlineUserService>();
+
 WebApplication app = builder.Build();
 
 app.UseHttpsRedirection();

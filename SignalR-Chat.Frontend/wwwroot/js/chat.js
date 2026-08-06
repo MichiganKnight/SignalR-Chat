@@ -25,6 +25,22 @@ connection.on("ReceiveMessage", (username, message, timestamp) => {
     messages.scrollTop = messages.scrollHeight;
 });
 
+connection.on("OnlineUsersUpdated", users => {
+    const container = document.getElementById("onlineUsers");
+    
+    container.innerHTML = "";
+    
+    users.forEach(user => {
+        const div = document.createElement("div");
+        
+        div.classList.add("online-user");
+        
+        div.innerHTML = `<span class="status-dot"></span> ${user.username}`;
+        
+        container.appendChild(div);
+    });
+});
+
 document.getElementById("sendButton").addEventListener("click", async () => {
     const input = document.getElementById("messageInput");
     const message = input.value.trim();
