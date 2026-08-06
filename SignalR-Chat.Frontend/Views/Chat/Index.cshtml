@@ -9,7 +9,7 @@
     <aside class="chat-sidebar">
         <div class="sidebar-header">
             <h5>
-                <i class="bi bg-chat-square-text"></i>
+                <i class="bi bi-chat-square-text"></i>
                 Conversations
             </h5>
             
@@ -51,7 +51,7 @@
             <div>
                 <h5>@Model.CurrentConversation.Name</h5>
                 
-                <small class="text-muted">Group Conversation</small>
+                <small class="text-muted">Public Conversation</small>
             </div>
             
             <button class="btn btn-outline-secondary btn-sm">
@@ -59,7 +59,7 @@
             </button>
         </div>
         
-        <div class="chat-messages">
+        <div class="chat-messages" id="messages">
             @foreach (MessageDto message in Model.CurrentConversation.Messages)
             {
                 <div class="message">
@@ -78,9 +78,9 @@
         
         <div class="chat-input">
             <div class="input-group">
-                <input class="form-control" placeholder="Send a Message..." />
+                <input id="messageInput" class="form-control" placeholder="Send a Message..." />
                 
-                <button class="btn btn-primary">
+                <button id="sendButton" class="btn btn-primary">
                     <i class="bi bi-send-fill"></i>
                 </button>
             </div>
@@ -99,13 +99,12 @@
         <div class="online-users">
             <div class="online-user">
                 <span class="status-dot"></span>
-                Bob
-            </div>
-            
-            <div class="online-user">
-                <span class="status-dot"></span>
-                Alice
+                Nobody Online Yet
             </div>
         </div>
     </aside>
 </div>
+
+@section Scripts {
+    <script src="~/js/chat.js"></script>
+}

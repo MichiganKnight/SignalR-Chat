@@ -1,41 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SignalR_Chat.Frontend.Services;
 using SignalR_Chat.Frontend.ViewModels;
-using SignalR_Chat.Shared.DTOs;
 
 namespace SignalR_Chat.Frontend.Controllers
 {
     public class ChatController : Controller
     {
+        private readonly CurrentUserService _currentUser;
+        
+        public ChatController(CurrentUserService currentUser)
+        {
+            _currentUser = currentUser;
+        }
+        
         public IActionResult Index()
         {
-            ChatViewModel model = new()
+            if (!_currentUser.User?.IsAuthenticated ?? true)
             {
-                CurrentConversation = new ConversationDto
-                {
-                    Id = 1,
-                    Name = "General",
-                    IsGroup = true,
+                return RedirectToAction("Login", "Account");
+            }
 
-                    Messages =
-                    [
-                        new MessageDto()
-                        {
-                            Id = 1,
-                            SenderUsername = "Bob",
-                            Content = "Hello!",
-                            SentAt = DateTime.Now.AddMinutes(-5)
-                        },
-
-                        new MessageDto
-                        {
-                            Id = 2,
-                            SenderUsername = "You",
-                            Content = "Hey Bob!",
-                            SentAt = DateTime.Now.AddMinutes(-4)
-                        }
-                    ]
-                }
-            };
+            ChatViewModel model = new();
             
             return View(model);
         }

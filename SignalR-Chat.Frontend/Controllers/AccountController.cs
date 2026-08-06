@@ -70,6 +70,8 @@ namespace SignalR_Chat.Frontend.Controllers
             if (result?.Success == true)
             {
                 _currentUser.SetUser(result.UserId!.Value, result.Username!, result.Token!);
+
+                TempData["LoginSuccess"] = true;
                 
                 return RedirectToAction("Index", "Chat");
             }
