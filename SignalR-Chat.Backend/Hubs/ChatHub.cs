@@ -42,5 +42,12 @@ namespace SignalR_Chat.Backend.Hubs
             
             await Clients.All.SendAsync("ReceiveMessage", username, message, DateTime.UtcNow);
         }
+
+        public async Task SendTyping()
+        {
+            string username = Context.User?.Identity?.Name ?? "Unknown";
+            
+            await Clients.Others.SendAsync("UserTyping", username);
+        }
     }
 }

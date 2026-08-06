@@ -4,8 +4,24 @@
     }
 }).build();
 
+let typingTimeout;
+
+const input = document.getElementById("messageInput");
+
+input.addEventListener("input", async () => {
+    await connection.invoke("SendTyping");
+
+    clearTimeout(typingTimeout);
+
+    typingTimeout = setTimeout(() => {
+
+    }, 1500);
+});
+
 connection.on("ReceiveMessage", (username, message, timestamp) => {
     const div = document.createElement("div");
+    
+    div.classList.add("message");
 
     div.innerHTML = `
             <div class="message-header">
@@ -39,6 +55,18 @@ connection.on("OnlineUsersUpdated", users => {
         
         container.appendChild(div);
     });
+});
+
+connection.on("UserTyping", username => {
+    const indicator = document.getElementById("typingIndicator");
+    
+    indicator.innerText = `${username} is typing...`;
+    
+    clearTimeout(indicator.timeout);
+    
+    indicator.timeout = setTimeout(() => {
+        indicator.innerText = "";
+    }, 1500);
 });
 
 document.getElementById("sendButton").addEventListener("click", async () => {
